@@ -2,4 +2,4 @@
  * @format
  */
 
-require("./src/index");
+require('./src/index');

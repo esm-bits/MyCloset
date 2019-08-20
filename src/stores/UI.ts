@@ -1,7 +1,7 @@
-import { types } from "mobx-state-tree";
+import { types } from 'mobx-state-tree';
 
 const UI = types
-  .model("UI", {
+  .model('UI', {
     isBusy: types.boolean,
   })
   .actions(self => ({

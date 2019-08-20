@@ -2,27 +2,27 @@
  * アプリ
  */
 
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   createAppContainer,
   createStackNavigator,
   SafeAreaView,
-} from "react-navigation";
+} from 'react-navigation';
 
-import Home from "@src/screens/home/Home";
-import Modals from "@src/screens/modals";
-import { observer } from "mobx-react";
-import UI from "@src/stores/UI";
-import Busy from "@src/components/Busy";
+import Home from '@src/screens/home/Home';
+import Modals from '@src/screens/modals';
+import { observer } from 'mobx-react';
+import UI from '@src/stores/UI';
+import Busy from '@src/components/Busy';
 
 const RootNavigator = createStackNavigator(
   {
     Home,
   },
   {
-    initialRouteKey: "Home",
-    headerMode: "float",
-  }
+    initialRouteKey: 'Home',
+    headerMode: 'float',
+  },
 );
 
 const AppNavigator = createStackNavigator(
@@ -31,9 +31,9 @@ const AppNavigator = createStackNavigator(
     ...Modals,
   },
   {
-    mode: "modal",
-    headerMode: "none",
-  }
+    mode: 'modal',
+    headerMode: 'none',
+  },
 );
 
 const AppContainer = createAppContainer(AppNavigator);

@@ -1,1 +1,1 @@
-declare module "mobx-devtools/lib/mobxDevtoolsBackend";
+declare module 'mobx-devtools/lib/mobxDevtoolsBackend';

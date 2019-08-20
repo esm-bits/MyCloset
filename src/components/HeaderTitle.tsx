@@ -1,6 +1,6 @@
-import React from "react";
-import { StyleSheet, Text } from "react-native";
-import { RFValue } from "react-native-responsive-fontsize";
+import React from 'react';
+import { StyleSheet, Text } from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 type Props = {
   label: string;
@@ -12,8 +12,8 @@ export default function HeaderTitle(props: Props) {
 
 const styles = StyleSheet.create({
   titleText: {
-    textAlign: "center",
+    textAlign: 'center',
     fontSize: RFValue(30),
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
 });

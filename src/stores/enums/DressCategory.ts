@@ -1,7 +1,7 @@
-import { types } from "mobx-state-tree";
+import { types } from 'mobx-state-tree';
 
 export const DressCategory = {
-  Uwagi: "",
+  Uwagi: '',
 };
 
-export default types.enumeration("DressCategory", Object.keys(DressCategory));
+export default types.enumeration('DressCategory', Object.keys(DressCategory));

@@ -1,6 +1,6 @@
-import { Instance, types } from "mobx-state-tree";
+import { Instance, types } from 'mobx-state-tree';
 
-const Dress = types.model("Dress", {
+const Dress = types.model('Dress', {
   id: types.number,
 });
 

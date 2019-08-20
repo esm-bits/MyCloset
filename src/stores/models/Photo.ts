@@ -1,6 +1,6 @@
-import { Instance, types } from "mobx-state-tree";
+import { Instance, types } from 'mobx-state-tree';
 
-const Photo = types.model("Photo", {});
+const Photo = types.model('Photo', {});
 
 export type PhotoType = Instance<typeof Photo>;
 

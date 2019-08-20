@@ -1,8 +1,8 @@
-import { types } from "mobx-state-tree";
-import Dress, { DressType } from "@src/stores/models/Dress";
+import { types } from 'mobx-state-tree';
+import Dress, { DressType } from '@src/stores/models/Dress';
 
 const DressList = types
-  .model("DressList", {
+  .model('DressList', {
     dressList: types.array(Dress),
   })
   .actions(self => ({
