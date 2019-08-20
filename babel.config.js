@@ -10,7 +10,6 @@ module.exports = {
         },
       },
     ],
-    ['@babel/plugin-transform-flow-strip-types'],
     [
       '@babel/plugin-proposal-decorators',
       {

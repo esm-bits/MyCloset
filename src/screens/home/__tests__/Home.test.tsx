@@ -7,5 +7,5 @@ Enzyme.configure({ adapter: new Adapter() });
 import Home from '../Home';
 
 test('dummy test', async () => {
-  const wrapper = shallow(<Home navigation={null as any} />);
+  const wrapper = shallow(<Home />);
 });
