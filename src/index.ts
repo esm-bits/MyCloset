@@ -1,4 +1,5 @@
-import { AppRegistry, Text } from 'react-native';
+import { Text } from 'react-native';
+import { Navigation } from 'react-native-navigation';
 import { name as appName } from '../app.json';
 import App from './App';
 
@@ -8,4 +9,14 @@ Text.defaultProps = Text.defaultProps || {};
 // @ts-ignore
 Text.defaultProps.allowFontScaling = false;
 
-AppRegistry.registerComponent(appName, () => App);
+Navigation.registerComponent(appName, () => App);
+
+Navigation.events().registerAppLaunchedListener(() => {
+  Navigation.setRoot({
+    root: {
+      component: {
+        name: appName,
+      },
+    },
+  });
+});
