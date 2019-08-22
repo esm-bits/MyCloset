@@ -1,3 +1,7 @@
+/**
+ * ビジー状態表示用画面(UIストア経由で、Overlayとして表示させる)
+ */
+
 import React, { Component } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
