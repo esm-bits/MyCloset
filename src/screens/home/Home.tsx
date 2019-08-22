@@ -11,10 +11,10 @@ type Props = {};
 
 @observer
 export default class Home extends Component<Props> {
-  componentDidMount(): void {
-    UI.setBusy(true);
-    setTimeout(() => {
-      UI.setBusy(false);
+  async componentDidMount() {
+    await UI.setBusy(true);
+    setTimeout(async () => {
+      await UI.setBusy(false);
     }, 3000);
   }
 
