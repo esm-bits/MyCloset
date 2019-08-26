@@ -6,7 +6,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "yarn eslint -c ./.eslintrc.js --ext .js,.ts,.jsx,.tsx,.json src/**/*",
-    "pod-install": "bundle install --path vendor/bundle && cd ios && BUNDLE_GEMFILE=../Gemfile bundle exec pod install --verbose"
+    "pod-install": "bundle install --path vendor/bundle && cd ios && BUNDLE_GEMFILE=../Gemfile bundle exec pod install"
   },
   "dependencies": {
     "core-decorators": "^0.20.0",
