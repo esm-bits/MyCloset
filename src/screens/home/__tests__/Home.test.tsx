@@ -8,4 +8,5 @@ import Home from '../Home';
 
 test('dummy test', async () => {
   const wrapper = shallow(<Home />);
+  expect(wrapper).toBeTruthy();
 });

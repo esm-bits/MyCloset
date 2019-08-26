@@ -5,6 +5,7 @@
   "scripts": {
     "start": "react-native start",
     "test": "jest",
+    "lint": "yarn eslint -c ./.eslintrc.js --ext .js,.ts,.jsx,.tsx,.json src/**/*",
     "pod-install": "bundle install --path vendor/bundle && cd ios && BUNDLE_GEMFILE=../Gemfile bundle exec pod install --verbose"
   },
   "dependencies": {
@@ -26,7 +27,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/runtime": "^7.5.0",
-    "@react-native-community/eslint-config": "^0.0.3",
+    "@react-native-community/eslint-config": "^0.0.5",
     "@types/core-decorators": "^0.20.0",
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
@@ -40,6 +41,8 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "eslint": "^6.2.2",
+    "eslint-plugin-prettier": "^3.1.0",
     "jest": "^24.1.0",
     "metro-react-native-babel-preset": "^0.54.1",
     "prettier": "^1.18.2",
