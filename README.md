@@ -21,5 +21,6 @@ sudo gem install bundler
 
 ```sh
 yarn
+# Macでiosのビルドをする場合は下記も実行する
 yarn pod-install
 ```
