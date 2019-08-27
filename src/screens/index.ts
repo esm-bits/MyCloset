@@ -13,7 +13,7 @@ export enum ScreenIds {
 }
 
 // 画面IDと、画面コンポーネントのマップ
-export const Screens = new Map<string, ComponentType>();
+export const Screens = new Map<string, ComponentType<any>>();
 Screens.set(ScreenIds.HOME, HomeScreen);
 Screens.set(ScreenIds.SETTING, SettingScreen);
 Screens.set(ScreenIds.BUSY, BusyScreen);

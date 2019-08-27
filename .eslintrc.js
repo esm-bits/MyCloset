@@ -6,6 +6,7 @@ module.exports = {
     'prettier/prettier': 'error',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
+    'react-native/no-inline-styles': 'off',
   },
   extends: [
     '@react-native-community',
