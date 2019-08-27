@@ -5,22 +5,28 @@
 ### 必要な環境
 
 - Node.js >= 10
-- Ruby (cocoapods用)
+- Ruby (cocoapods 用)
 
-※iOSのビルドをするならMacが必要。
+※iOS のビルドをするなら Mac が必要。
 
-### インストール
+### How to 開発
 
-#### Bundlerのインストール
+#### アプリの依存ライブラリのインストール＆起動
 
-```sh
-sudo gem install bundler
-```
-
-#### アプリの依存ライブラリのインストール
+- インストール
 
 ```sh
 yarn
 # Macでiosのビルドをする場合は下記も実行する
+sudo gem install bundler
 yarn pod-install
+```
+
+- 起動
+
+```sh
+# ios
+yarn react-native run-ios
+# android
+yarn react-native run-android
 ```
