@@ -59,6 +59,9 @@
     "moduleNameMapper": {
       "^@src/(.+)": "<rootDir>/src/$1"
     },
+    "setupFiles": [
+      "./scripts/jest-setup.js"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
