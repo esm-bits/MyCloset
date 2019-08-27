@@ -8,6 +8,8 @@ import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
 
+import org.reactnative.camera.RNCameraPackage;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -31,6 +33,8 @@ public class MainApplication extends NavigationApplication {
     @Nullable
     @Override
     public List<ReactPackage> createAdditionalReactPackages() {
-        return Arrays.asList();
+        return Arrays.asList(
+                new RNCameraPackage()
+        );
     }
 }

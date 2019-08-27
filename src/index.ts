@@ -17,8 +17,14 @@ Screens.forEach((component, screenId) => {
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {
-      component: {
-        name: ScreenIds.HOME,
+      stack: {
+        children: [
+          {
+            component: {
+              name: ScreenIds.HOME,
+            },
+          },
+        ],
       },
     },
   });
