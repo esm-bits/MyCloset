@@ -2,13 +2,14 @@
  * グローバルなユーザーインターフェースに関する状態を保持するストア
  */
 
-import { types, flow } from 'mobx-state-tree';
+import { flow, types } from 'mobx-state-tree';
 import { Navigation } from 'react-native-navigation';
 import { ScreenIds } from '@src/screens';
 import UUID from '@src/helpers/UUID';
 
 const UI = types
   .model('UI', {
+    currentScreenId: types.maybe(types.string),
     isBusy: types.boolean,
     busyOverlayComponentId: types.maybe(types.string),
   })
@@ -23,7 +24,7 @@ const UI = types
         yield Navigation.showOverlay({
           component: {
             id: self.busyOverlayComponentId,
-            name: ScreenIds.Busy,
+            name: ScreenIds.BUSY,
             options: {
               overlay: {
                 interceptTouchOutside: true,

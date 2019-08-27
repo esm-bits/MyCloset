@@ -134,6 +134,7 @@ android {
         versionCode 1
         versionName "1.0"
         missingDimensionStrategy "RNN.reactNativeVersion", "reactNative60"
+        missingDimensionStrategy 'react-native-camera', 'general'
     }
     splits {
         abi {
@@ -192,6 +193,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation project(':react-native-navigation')
+    implementation project(':react-native-camera')
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";

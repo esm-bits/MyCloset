@@ -53,5 +53,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+    <string>服の写真を撮影するためにカメラの許可が必要です。</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>服の写真をフォトライブラリーに保存するために許可が必要です。</string>
 </dict>
 </plist>
