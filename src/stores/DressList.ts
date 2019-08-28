@@ -13,19 +13,17 @@ const DressList = types
     /**
      * 服一覧をAsyncStorageからリロードする
      */
-    hydrate() {
-      return flow(function*() {
-        try {
-          const data = yield AsyncStorage.getItem('DressList');
-          if (data) {
-            applySnapshot(DressList, JSON.parse(data));
-          }
-          (self as any).apply();
-        } catch (err) {
-          // エラー
+    hydrate: flow(function*() {
+      try {
+        const data = yield AsyncStorage.getItem('DressList');
+        if (data) {
+          applySnapshot(DressList, JSON.parse(data));
         }
-      });
-    },
+        (self as any).apply();
+      } catch (err) {
+        // エラー
+      }
+    }),
   }))
   .create({ dressList: [] });
 
