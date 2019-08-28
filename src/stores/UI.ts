@@ -6,6 +6,7 @@ import { flow, types } from 'mobx-state-tree';
 import { Navigation } from 'react-native-navigation';
 import { ScreenIds } from '@src/screens';
 import UUID from '@src/helpers/UUID';
+import RNRestart from 'react-native-restart';
 
 const UI = types
   .model('UI', {
@@ -38,6 +39,12 @@ const UI = types
       }
       self.isBusy = isBusy;
     }),
+    /**
+     * アプリのReactNativeの部分を再起動させる
+     */
+    restartApp: function() {
+      RNRestart.Restart();
+    },
   }))
   .create({
     isBusy: false,

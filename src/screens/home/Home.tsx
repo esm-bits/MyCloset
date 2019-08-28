@@ -43,6 +43,11 @@ export default class Home extends Component<Props> {
     });
   }
 
+  @autobind
+  onPressRestartButton() {
+    UI.restartApp();
+  }
+
   async componentDidMount() {
     await UI.setBusy(true);
     setTimeout(async () => {
@@ -56,6 +61,7 @@ export default class Home extends Component<Props> {
         <View>
           <Text>Home</Text>
           <Button title="Camera" onPress={this.onPressCameraButton} />
+          <Button title="Restart" onPress={this.onPressRestartButton} />
         </View>
       </SafeAreaView>
     );

@@ -5,5 +5,10 @@ module.exports = {
         android: null,
       },
     },
+    'react-native-restart': {
+      platforms: {
+        android: null,
+      },
+    },
   },
 };

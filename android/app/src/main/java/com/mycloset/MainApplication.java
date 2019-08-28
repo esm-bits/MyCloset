@@ -2,6 +2,7 @@ package com.mycloset;
 
 import androidx.annotation.Nullable;
 
+import com.avishayil.rnrestart.ReactNativeRestartPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.reactnativenavigation.NavigationApplication;
@@ -34,7 +35,8 @@ public class MainApplication extends NavigationApplication {
     @Override
     public List<ReactPackage> createAdditionalReactPackages() {
         return Arrays.asList(
-                new RNCameraPackage()
+                new RNCameraPackage(),
+                new ReactNativeRestartPackage()
         );
     }
 }
