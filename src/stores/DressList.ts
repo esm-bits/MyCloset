@@ -1,5 +1,6 @@
-import { types } from 'mobx-state-tree';
+import { applySnapshot, flow, types } from 'mobx-state-tree';
 import Dress, { DressType } from '@src/stores/models/Dress';
+import { AsyncStorage } from 'react-native';
 
 const DressList = types
   .model('DressList', {
@@ -8,6 +9,22 @@ const DressList = types
   .actions(self => ({
     addDress(dress: DressType) {
       self.dressList.push(dress);
+    },
+    /**
+     * 服一覧をAsyncStorageからリロードする
+     */
+    hydrate() {
+      return flow(function*() {
+        try {
+          const data = yield AsyncStorage.getItem('DressList');
+          if (data) {
+            applySnapshot(DressList, JSON.parse(data));
+          }
+          (self as any).apply();
+        } catch (err) {
+          // エラー
+        }
+      });
     },
   }))
   .create({ dressList: [] });

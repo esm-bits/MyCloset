@@ -1,4 +1,4 @@
-import { Text } from 'react-native';
+import { AsyncStorage, Text } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import { ScreenIds, Screens } from '@src/screens';
 import {
@@ -6,6 +6,9 @@ import {
   setNativeExceptionHandler,
 } from 'react-native-exception-handler';
 import UI from '@src/stores/UI';
+import { onSnapshot } from 'mobx-state-tree';
+import DressList from '@src/stores/DressList';
+import { debounce } from 'lodash-es';
 
 // OSのフォントスケーリングは無効化する //
 // @ts-ignore
@@ -23,8 +26,9 @@ Screens.forEach((component, screenId) => {
 });
 
 // 起動時に呼び出されるコールバック
-Navigation.events().registerAppLaunchedListener(() => {
-  Navigation.setRoot({
+Navigation.events().registerAppLaunchedListener(async () => {
+  await DressList.hydrate();
+  await Navigation.setRoot({
     root: {
       stack: {
         children: [
@@ -38,3 +42,13 @@ Navigation.events().registerAppLaunchedListener(() => {
     },
   });
 });
+
+// DressListに変更があるたびに永続化する
+onSnapshot(
+  DressList,
+  debounce(
+    (snapshot: any) =>
+      AsyncStorage.setItem('DressList', JSON.stringify(snapshot)),
+    1000,
+  ),
+);

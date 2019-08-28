@@ -19,42 +19,44 @@ const UI = types
      * ビジー状態を示すコンポーネントを表示する
      * @param isBusy
      */
-    setBusy: flow(function*(isBusy: boolean) {
-      if (isBusy) {
-        self.busyOverlayComponentId = `BusyOverlayComponent_${UUID()}`;
-        yield Navigation.showOverlay({
-          component: {
-            id: self.busyOverlayComponentId,
-            name: ScreenIds.BUSY,
-            options: {
-              overlay: {
-                interceptTouchOutside: true,
+    setBusy() {
+      return flow(function*(isBusy: boolean) {
+        if (isBusy) {
+          self.busyOverlayComponentId = `BusyOverlayComponent_${UUID()}`;
+          yield Navigation.showOverlay({
+            component: {
+              id: self.busyOverlayComponentId,
+              name: ScreenIds.BUSY,
+              options: {
+                overlay: {
+                  interceptTouchOutside: true,
+                },
               },
             },
-          },
-        });
-      } else {
-        self.busyOverlayComponentId &&
-          (yield Navigation.dismissOverlay(self.busyOverlayComponentId));
-      }
-      self.isBusy = isBusy;
-    }),
+          });
+        } else {
+          self.busyOverlayComponentId &&
+            (yield Navigation.dismissOverlay(self.busyOverlayComponentId));
+        }
+        self.isBusy = isBusy;
+      });
+    },
     /**
      * アプリのReactNativeの部分を再起動させる
      */
-    restartApp: function() {
+    restartApp() {
       RNRestart.Restart();
     },
     /**
      * js例外を処理する
      */
-    handleJsException: function(error: Error, isFatal: boolean) {
+    handleJsException(error: Error, isFatal: boolean) {
       console.log({ jsException: { error, isFatal } });
     },
     /**
      * ネイティブ例外を処理する
      */
-    handleNativeException: function(exceptionMsg: string) {
+    handleNativeException(exceptionMsg: string) {
       console.log({ nativeException: { exceptionMsg } });
     },
   }))
