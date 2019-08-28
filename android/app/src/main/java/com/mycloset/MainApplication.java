@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import com.avishayil.rnrestart.ReactNativeRestartPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
+import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
@@ -36,7 +37,8 @@ public class MainApplication extends NavigationApplication {
     public List<ReactPackage> createAdditionalReactPackages() {
         return Arrays.asList(
                 new RNCameraPackage(),
-                new ReactNativeRestartPackage()
+                new ReactNativeRestartPackage(),
+                new ReactNativeExceptionHandlerPackage()
         );
     }
 }

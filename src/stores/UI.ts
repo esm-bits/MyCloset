@@ -45,6 +45,18 @@ const UI = types
     restartApp: function() {
       RNRestart.Restart();
     },
+    /**
+     * js例外を処理する
+     */
+    handleJsException: function(error: Error, isFatal: boolean) {
+      console.log({ jsException: { error, isFatal } });
+    },
+    /**
+     * ネイティブ例外を処理する
+     */
+    handleNativeException: function(exceptionMsg: string) {
+      console.log({ nativeException: { exceptionMsg } });
+    },
   }))
   .create({
     isBusy: false,
