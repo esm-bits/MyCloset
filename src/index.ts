@@ -1,4 +1,5 @@
-import { AsyncStorage, Text } from 'react-native';
+import { Text } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { Navigation } from 'react-native-navigation';
 import { ScreenIds, Screens } from '@src/screens';
 import {

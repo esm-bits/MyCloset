@@ -6,6 +6,7 @@ import com.avishayil.rnrestart.ReactNativeRestartPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
@@ -38,7 +39,8 @@ public class MainApplication extends NavigationApplication {
         return Arrays.asList(
                 new RNCameraPackage(),
                 new ReactNativeRestartPackage(),
-                new ReactNativeExceptionHandlerPackage()
+                new ReactNativeExceptionHandlerPackage(),
+                new AsyncStoragePackage()
         );
     }
 }

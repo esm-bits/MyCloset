@@ -40,6 +40,23 @@ const UI = types
       self.isBusy = isBusy;
     }),
     /**
+     * Alertを表示する
+     * @param isBusy
+     */
+    showAlert: flow(function*() {
+      yield Navigation.showOverlay({
+        component: {
+          id: 'hoge',
+          name: ScreenIds.ALERT,
+          options: {
+            overlay: {
+              interceptTouchOutside: true,
+            },
+          },
+        },
+      });
+    }),
+    /**
      * アプリのReactNativeの部分を再起動させる
      */
     restartApp() {

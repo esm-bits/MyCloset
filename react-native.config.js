@@ -15,5 +15,10 @@ module.exports = {
         android: null,
       },
     },
+    '@react-native-community/async-storage': {
+      platforms: {
+        android: null,
+      },
+    },
   },
 };

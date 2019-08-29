@@ -3,6 +3,7 @@ import HomeScreen from '@src/screens/home/Home';
 import BusyScreen from '@src/screens/modals/Busy';
 import SettingScreen from '@src/screens/setting/Setting';
 import CameraScreen from '@src/screens/camera/Camera';
+import AlertScreen from '@src/screens/modals/Alert';
 
 // 各画面のID
 export enum ScreenIds {
@@ -10,6 +11,7 @@ export enum ScreenIds {
   BUSY = 'BUSY_SCREEN',
   SETTING = 'SETTING_SCREEN',
   CAMERA = 'CAMERA_SCREEN',
+  ALERT = 'ALERT_SCREEN',
 }
 
 // 画面IDと、画面コンポーネントのマップ
@@ -18,3 +20,4 @@ Screens.set(ScreenIds.HOME, HomeScreen);
 Screens.set(ScreenIds.SETTING, SettingScreen);
 Screens.set(ScreenIds.BUSY, BusyScreen);
 Screens.set(ScreenIds.CAMERA, CameraScreen);
+Screens.set(ScreenIds.ALERT, AlertScreen);
