@@ -2,7 +2,7 @@ import { applySnapshot, flow, types } from 'mobx-state-tree';
 import Dress, { DressType } from '@src/stores/models/Dress';
 import AsyncStorage from '@react-native-community/async-storage';
 
-const DressList = types
+export const DressListStore = types
   .model('DressList', {
     dressList: types.array(Dress),
   })
@@ -17,14 +17,15 @@ const DressList = types
       try {
         const data = yield AsyncStorage.getItem('DressList');
         if (data) {
-          applySnapshot(DressList, JSON.parse(data));
+          applySnapshot(store, JSON.parse(data));
         }
         (self as any).apply();
       } catch (err) {
         // エラー
       }
     }),
-  }))
-  .create({ dressList: [] });
+  }));
 
-export default DressList;
+const store = DressListStore.create({ dressList: [] });
+
+export default store;

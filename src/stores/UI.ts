@@ -8,7 +8,7 @@ import { ScreenIds } from '@src/screens';
 import UUID from '@src/helpers/UUID';
 import RNRestart from 'react-native-restart';
 
-const UI = types
+export const UIStore = types
   .model('UI', {
     currentScreenId: types.maybe(types.string),
     isBusy: types.boolean,
@@ -74,9 +74,8 @@ const UI = types
     handleNativeException(exceptionMsg: string) {
       console.log({ nativeException: { exceptionMsg } });
     },
-  }))
-  .create({
-    isBusy: false,
-  });
+  }));
 
-export default UI;
+const store = UIStore.create({ isBusy: false });
+
+export default store;
