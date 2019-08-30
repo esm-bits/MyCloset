@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { autobind } from 'core-decorators';
 
 export default class Alert extends Component {
@@ -9,7 +9,13 @@ export default class Alert extends Component {
   }
 
   render() {
-    return <View style={styles.container}></View>;
+    return (
+      <View style={styles.container}>
+        <View style={styles.dialog}>
+          <Text>Alert</Text>
+        </View>
+      </View>
+    );
   }
 }
 
@@ -21,7 +27,10 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     opacity: 0.8,
+  },
+  dialog: {
+    backgroundColor: 'white',
   },
 });
