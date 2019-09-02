@@ -4,11 +4,13 @@
 
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
-import { Button, SafeAreaView, Text, View } from 'react-native';
+import { SafeAreaView, View } from 'react-native';
 import UI from '@src/stores/UI';
 import { autobind } from 'core-decorators';
 import { ScreenIds } from '@src/screens';
 import { Navigation } from 'react-native-navigation';
+import { Button, Text, ThemeProvider } from 'react-native-elements';
+import theme from '@src/components/themes';
 
 type Props = {
   componentId: string;
@@ -63,12 +65,14 @@ export default class Home extends Component<Props> {
   render() {
     return (
       <SafeAreaView>
-        <View>
-          <Text>Home</Text>
-          <Button title="Camera" onPress={this.onPressCameraButton} />
-          <Button title="Restart" onPress={this.onPressRestartButton} />
-          <Button title="Alert" onPress={this.onPressAlertButton} />
-        </View>
+        <ThemeProvider theme={theme}>
+          <View>
+            <Text>Home</Text>
+            <Button title="Camera" onPress={this.onPressCameraButton} />
+            <Button title="Restart" onPress={this.onPressRestartButton} />
+            <Button title="Alert" onPress={this.onPressAlertButton} />
+          </View>
+        </ThemeProvider>
       </SafeAreaView>
     );
   }
