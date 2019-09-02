@@ -93,7 +93,7 @@ PODS:
     - React-Core (= 0.60.5)
   - ReactNativeExceptionHandler (2.10.8):
     - React
-  - ReactNativeNavigation (3.0.0):
+  - ReactNativeNavigation (3.1.2):
     - React
   - RNCAsyncStorage (1.6.1):
     - React
@@ -214,7 +214,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: 2105b2e0e2b66a6408fc69a46c8a7fb5b2fdade0
   React-RCTWebSocket: cd932a16b7214898b6b7f788c8bddb3637246ac4
   ReactNativeExceptionHandler: 8025d98049c25f186835a3af732dd7c9974d6dce
-  ReactNativeNavigation: 203ecc605b2949f766fe912d635551b048ac2958
+  ReactNativeNavigation: 86a76f888e7e3c42c1b6eaee634142baab6420eb
   RNCAsyncStorage: 2e2e3feb9bdadc752a026703d8c4065ca912e75a
   yoga: 312528f5bbbba37b4dcea5ef00e8b4033fdd9411
 
