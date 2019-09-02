@@ -13,3 +13,7 @@ test:node:10.16:
   script:
     - yarn lint
     - yarn test
+
+sast:
+  script:
+    - docker run --interactive --tty --rm --volume "$PWD":/code --volume /var/run/docker.sock:/var/run/docker.sock registry.gitlab.com/gitlab-org/security-products/sast:${VERSION:-latest} /app/bin/run /code
