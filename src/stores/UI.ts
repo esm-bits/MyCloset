@@ -60,7 +60,7 @@ export const UIStore = types
      * Alertを消す
      */
     hideAlert: flow(function*(componentId: string) {
-      yield Navigation.dismissModal(componentId);
+      yield Navigation.dismissOverlay(componentId);
     }),
     /**
      * アプリのReactNativeの部分を再起動させる
