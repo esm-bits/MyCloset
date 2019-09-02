@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { autobind } from 'core-decorators';
+import { Button, Card, Text } from 'react-native-elements';
+import UI from '@src/stores/UI';
 
-export default class Alert extends Component {
+export type PassProps = {
+  title: string;
+  message: string;
+};
+
+type Props = {
+  componentId: string;
+} & PassProps;
+
+export default class Alert extends Component<Props> {
   @autobind
-  hideAlert() {
-    console.log('here');
+  async hideAlert() {
+    await UI.hideAlert(this.props.componentId);
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.dialog}>
-          <Text>Alert</Text>
-        </View>
+        <Card title={this.props.title}>
+          <Text style={styles.message}>{this.props.message}</Text>
+          <Button title="閉じる" onPress={this.hideAlert} />
+        </Card>
       </View>
     );
   }
@@ -32,5 +44,10 @@ const styles = StyleSheet.create({
   },
   dialog: {
     backgroundColor: 'white',
+  },
+  message: {
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 20,
   },
 });

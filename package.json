@@ -5,7 +5,7 @@
   "scripts": {
     "start": "react-native start",
     "test": "jest",
-    "lint": "yarn eslint -c ./.eslintrc.js --ext .js,.ts,.jsx,.tsx,.json src/**/* && yarn tsc --build tsconfig.json",
+    "lint": "yarn eslint -c ./.eslintrc.js --ext .js,.ts,.jsx,.tsx,.json src/**/*",
     "pod-install": "bundle install --path vendor/bundle && cd ios && BUNDLE_GEMFILE=../Gemfile bundle exec pod install"
   },
   "dependencies": {
@@ -43,7 +43,6 @@
     "@types/prop-types": "^15.7.1",
     "@types/react": "^16.8.23",
     "@types/react-native": "^0.60.1",
-    "@types/react-native-vector-icons": "^6.4.1",
     "@types/react-test-renderer": "^16.8.2",
     "@types/uuid": "^3.4.5",
     "@typescript-eslint/eslint-plugin": "^2.0.0",

@@ -52,7 +52,10 @@ export default class Home extends Component<Props> {
 
   @autobind
   async onPressAlertButton() {
-    await UI.showAlert();
+    await UI.showAlert({
+      title: 'テストアラート',
+      message: 'テストアラートメッセージ',
+    });
   }
 
   async componentDidMount() {

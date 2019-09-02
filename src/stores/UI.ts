@@ -7,6 +7,7 @@ import { Navigation } from 'react-native-navigation';
 import { ScreenIds } from '@src/screens';
 import UUID from '@src/helpers/UUID';
 import RNRestart from 'react-native-restart';
+import { PassProps as AlertScreenProps } from '@src/screens/modals/Alert';
 
 export const UIStore = types
   .model('UI', {
@@ -41,20 +42,25 @@ export const UIStore = types
     }),
     /**
      * Alertを表示する
-     * @param isBusy
      */
-    showAlert: flow(function*() {
+    showAlert: flow(function*(props: AlertScreenProps) {
       yield Navigation.showOverlay({
         component: {
-          id: 'hoge',
           name: ScreenIds.ALERT,
           options: {
             overlay: {
               interceptTouchOutside: true,
             },
           },
+          passProps: props,
         },
       });
+    }),
+    /**
+     * Alertを消す
+     */
+    hideAlert: flow(function*(componentId: string) {
+      yield Navigation.dismissModal(componentId);
     }),
     /**
      * アプリのReactNativeの部分を再起動させる
