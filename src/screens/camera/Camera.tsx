@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 import { RNCamera } from 'react-native-camera';
+import { autobind } from 'core-decorators';
+import UI from '@src/stores/UI';
+import DressList from '@src/stores/DressList';
 
 type Props = {
   componentId: string;
@@ -19,13 +22,21 @@ export default class Camera extends Component<Props> {
 
   private cameraRef = React.createRef<RNCamera>();
 
-  takePicture = async () => {
+  @autobind
+  async takePicture() {
     if (this.cameraRef.current) {
-      const options = { quality: 0.5, base64: true };
+      await UI.setBusy(true);
+      const options = { quality: 0.5 };
       const data = await this.cameraRef.current.takePictureAsync(options);
-      console.log(data.uri);
+      DressList.addDressFromPhoto({
+        tag: data.uri,
+        height: data.height,
+        width: data.width,
+      });
+      console.log({ photoUrl: data.uri, data });
+      await UI.setBusy(false);
     }
-  };
+  }
 
   render() {
     return (
@@ -48,7 +59,7 @@ export default class Camera extends Component<Props> {
           <TouchableOpacity
             onPress={this.takePicture.bind(this)}
             style={styles.capture}>
-            <Text style={{ fontSize: 14 }}> SNAP </Text>
+            <Text style={{ fontSize: 14 }}> 撮影する </Text>
           </TouchableOpacity>
         </View>
       </View>

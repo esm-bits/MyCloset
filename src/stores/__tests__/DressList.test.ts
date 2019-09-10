@@ -4,7 +4,7 @@ describe('DressListStore', () => {
   it('addDressで服を追加できる', () => {
     const store = DressListStore.create({ dressList: [] });
     expect(store.dressList.length).toBe(0);
-    store.addDress({ id: 0 });
+    store.addDress({ id: '', photos: [] });
     expect(store.dressList.length).toBe(1);
   });
 });

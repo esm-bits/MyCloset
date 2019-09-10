@@ -59,10 +59,6 @@ export default class Home extends Component<Props> {
   }
 
   async componentDidMount() {
-    await UI.setBusy(true);
-    setTimeout(async () => {
-      await UI.setBusy(false);
-    }, 3000);
   }
 
   render() {

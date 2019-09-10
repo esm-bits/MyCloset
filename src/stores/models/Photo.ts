@@ -1,7 +1,15 @@
-import { Instance, types } from 'mobx-state-tree';
+/**
+ * 1枚の写真ファイルに相当するモデル
+ */
 
-const Photo = types.model('Photo', {});
+import { SnapshotOrInstance, types } from 'mobx-state-tree';
 
-export type PhotoType = Instance<typeof Photo>;
+const Photo = types.model('Photo', {
+  tag: types.string,
+  width: types.number,
+  height: types.number,
+});
+
+export type PhotoType = SnapshotOrInstance<typeof Photo>;
 
 export default Photo;
