@@ -58,9 +58,6 @@ export default class Home extends Component<Props> {
     });
   }
 
-  async componentDidMount() {
-  }
-
   render() {
     return (
       <SafeAreaView>

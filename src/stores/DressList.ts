@@ -3,7 +3,6 @@ import Dress, { DressType } from '@src/stores/models/Dress';
 import AsyncStorage from '@react-native-community/async-storage';
 import UUID from '@src/helpers/UUID';
 import { PhotoType } from '@src/stores/models/Photo';
-import { DressCategoryValue } from '@src/stores/enums/DressCategory';
 
 export const DressListStore = types
   .model('DressList', {
@@ -16,7 +15,7 @@ export const DressListStore = types
     addDressFromPhoto(photo: PhotoType) {
       const dress: DressType = {
         id: UUID(),
-        category: DressCategoryValue.未分類,
+        category: '未分類',
         photos: [photo],
       };
       self.dressList.push(dress);
