@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
-import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
+import {
+  StyleSheet,
+  TouchableOpacity,
+  View,
+  Text,
+  SafeAreaView,
+} from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import { autobind } from 'core-decorators';
 import UI from '@src/stores/UI';
 import DressList from '@src/stores/DressList';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 type Props = {
   componentId: string;
@@ -54,14 +61,16 @@ export default class Camera extends Component<Props> {
             buttonNegative: 'キャンセル',
           }}
         />
-        <View
-          style={{ flex: 0, flexDirection: 'row', justifyContent: 'center' }}>
+        <View style={styles.bottomArea}>
           <TouchableOpacity
             onPress={this.takePicture.bind(this)}
-            style={styles.capture}>
-            <Text style={{ fontSize: 14 }}> 撮影する </Text>
+            style={styles.takePictureRoundButtonWrapper}>
+            <View style={styles.takePictureRoundButtonBlackFrame}>
+              <View style={styles.takePictureRoundButton} />
+            </View>
           </TouchableOpacity>
         </View>
+        <SafeAreaView />
       </View>
     );
   }
@@ -78,13 +87,35 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
-  capture: {
+  bottomArea: {
     flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    padding: 15,
-    paddingHorizontal: 20,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: RFValue(30),
+    marginBottom: RFValue(30),
+  },
+  takePictureRoundButtonWrapper: {
     alignSelf: 'center',
-    margin: 20,
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+    width: RFValue(70),
+    height: RFValue(70),
+    borderRadius: RFValue(35),
+  },
+  takePictureRoundButtonBlackFrame: {
+    alignSelf: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#000',
+    width: RFValue(66),
+    height: RFValue(66),
+    borderRadius: RFValue(33),
+  },
+  takePictureRoundButton: {
+    alignSelf: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+    width: RFValue(62),
+    height: RFValue(62),
+    borderRadius: RFValue(31),
   },
 });
