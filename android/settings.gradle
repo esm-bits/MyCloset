@@ -5,15 +5,3 @@ include ':app'
 // RNN
 include ':react-native-navigation'
 project(':react-native-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-navigation/lib/android/app/')
-
-include ':react-native-camera'
-project(':react-native-camera').projectDir = new File(rootProject.projectDir,    '../node_modules/react-native-camera/android')
-
-include ':react-native-restart'
-project(':react-native-restart').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-restart/android')
-
-include ':react-native-exception-handler'
-project(':react-native-exception-handler').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-exception-handler/android')
-
-include ':@react-native-community_async-storage'
-project(':@react-native-community_async-storage').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-community/async-storage/android')
