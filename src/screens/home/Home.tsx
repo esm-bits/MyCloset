@@ -24,8 +24,29 @@ export default class Home extends Component<Props> {
         title: {
           text: '服一覧',
         },
+        rightButtons: [
+          {
+            id: 'showInfo',
+            text: 'info'
+          }
+        ]
       },
     };
+  }
+
+  constructor(props: Props) {
+    super(props);
+    Navigation.events().bindComponent(this);
+  }
+
+  async navigationButtonPressed({ buttonId }: { buttonId: string }) {
+    if (buttonId === 'showInfo') {
+      await Navigation.push(this.props.componentId, {
+        component: {
+          name: ScreenIds.SETTING,
+        }
+      });
+    }
   }
 
   @autobind
