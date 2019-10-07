@@ -27,9 +27,9 @@ export default class Home extends Component<Props> {
         rightButtons: [
           {
             id: 'showInfo',
-            text: 'info'
-          }
-        ]
+            text: 'info',
+          },
+        ],
       },
     };
   }
@@ -44,7 +44,7 @@ export default class Home extends Component<Props> {
       await Navigation.push(this.props.componentId, {
         component: {
           name: ScreenIds.SETTING,
-        }
+        },
       });
     }
   }
