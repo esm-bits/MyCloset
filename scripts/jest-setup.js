@@ -11,3 +11,5 @@ configure({ adapter: new Adapter() });
 jest.mock('@react-native-community/async-storage', () => ({
   getItem: jest.fn(),
 }));
+
+jest.mock('react-native-device-info', () => {});
