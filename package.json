@@ -22,7 +22,7 @@
     "react-native-camera": "^3.3.0",
     "react-native-config": "https://github.com/luggit/react-native-config.git#master",
     "react-native-device-info": "^3.1.4",
-    "react-native-elements": "^1.2.5",
+    "react-native-elements": "^1.2.6",
     "react-native-exception-handler": "^2.10.8",
     "react-native-navigation": "^3.1.2",
     "react-native-responsive-fontsize": "^0.2.1",
