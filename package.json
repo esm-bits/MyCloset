@@ -9,7 +9,7 @@
     "pod-install": "bundle install --path vendor/bundle && cd ios && BUNDLE_GEMFILE=../Gemfile bundle exec pod install"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.6.1",
+    "@react-native-community/async-storage": "^1.6.2",
     "core-decorators": "^0.20.0",
     "lodash-es": "^4.17.15",
     "mobx": "^5.13.0",
