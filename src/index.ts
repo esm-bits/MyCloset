@@ -1,15 +1,15 @@
-import { Text } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
-import { Navigation } from 'react-native-navigation';
 import { ScreenIds, Screens } from '@src/screens';
+import DressList from '@src/stores/DressList';
+import UI from '@src/stores/UI';
+import { debounce } from 'lodash-es';
+import { onSnapshot } from 'mobx-state-tree';
+import { Text } from 'react-native';
 import {
   setJSExceptionHandler,
   setNativeExceptionHandler,
 } from 'react-native-exception-handler';
-import UI from '@src/stores/UI';
-import { onSnapshot } from 'mobx-state-tree';
-import DressList from '@src/stores/DressList';
-import { debounce } from 'lodash-es';
+import { Navigation } from 'react-native-navigation';
 
 // OSのフォントスケーリングは無効化する //
 // @ts-ignore

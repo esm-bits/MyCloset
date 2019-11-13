@@ -1,9 +1,9 @@
-import { ComponentType } from 'react';
+import CameraScreen from '@src/screens/camera/Camera';
 import HomeScreen from '@src/screens/home/Home';
+import AlertScreen from '@src/screens/modals/Alert';
 import BusyScreen from '@src/screens/modals/Busy';
 import SettingScreen from '@src/screens/setting/Setting';
-import CameraScreen from '@src/screens/camera/Camera';
-import AlertScreen from '@src/screens/modals/Alert';
+import { ComponentType } from 'react';
 
 // 各画面のID
 export enum ScreenIds {

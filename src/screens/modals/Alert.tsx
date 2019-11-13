@@ -1,8 +1,8 @@
+import UI from '@src/stores/UI';
+import { autobind } from 'core-decorators';
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { autobind } from 'core-decorators';
 import { Button, Card, Text } from 'react-native-elements';
-import UI from '@src/stores/UI';
 
 export type PassProps = {
   title: string;
