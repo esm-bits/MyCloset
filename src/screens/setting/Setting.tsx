@@ -2,12 +2,12 @@
  * 設定画面
  */
 
-import React, { Component } from 'react';
-import { SafeAreaView, Text, ScrollView, Linking } from 'react-native';
-import { ThemeProvider, ListItem } from 'react-native-elements';
 import theme from '@src/components/themes';
-import DeviceInfo from 'react-native-device-info';
 import { autobind } from 'core-decorators';
+import React, { Component } from 'react';
+import { Linking, SafeAreaView, ScrollView, Text } from 'react-native';
+import DeviceInfo from 'react-native-device-info';
+import { ListItem, ThemeProvider } from 'react-native-elements';
 
 type Props = {};
 type State = {
@@ -35,8 +35,8 @@ export default class Setting extends Component<Props, State> {
   }
 
   async componentDidMount() {
-    const name = DeviceInfo.getApplicationNameSync();
-    const version = DeviceInfo.getVersionSync();
+    const name = DeviceInfo.getApplicationName();
+    const version = DeviceInfo.getVersion();
     this.setState({
       name,
       version,

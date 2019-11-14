@@ -1,5 +1,6 @@
-import { applySnapshot, flow, types } from 'mobx-state-tree';
 import AsyncStorage from '@react-native-community/async-storage';
+import { applySnapshot, flow, types } from 'mobx-state-tree';
+
 import Category, { CategoryType } from './models/Category';
 
 export const CategoryListStore = types

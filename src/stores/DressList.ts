@@ -1,6 +1,6 @@
-import { applySnapshot, flow, types } from 'mobx-state-tree';
-import Dress, { DressType } from '@src/stores/models/Dress';
 import AsyncStorage from '@react-native-community/async-storage';
+import Dress, { DressType } from '@src/stores/models/Dress';
+import { applySnapshot, flow, types } from 'mobx-state-tree';
 
 export const DressListStore = types
   .model('DressList', {

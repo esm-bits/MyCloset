@@ -2,12 +2,12 @@
  * グローバルなユーザーインターフェースに関する状態を保持するストア
  */
 
+import UUID from '@src/helpers/UUID';
+import { ScreenIds } from '@src/screens';
+import { PassProps as AlertScreenProps } from '@src/screens/modals/Alert';
 import { flow, types } from 'mobx-state-tree';
 import { Navigation } from 'react-native-navigation';
-import { ScreenIds } from '@src/screens';
-import UUID from '@src/helpers/UUID';
 import RNRestart from 'react-native-restart';
-import { PassProps as AlertScreenProps } from '@src/screens/modals/Alert';
 
 export const UIStore = types
   .model('UI', {

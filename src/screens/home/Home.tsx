@@ -2,15 +2,15 @@
  * ホーム画面
  */
 
-import React, { Component } from 'react';
-import { observer } from 'mobx-react';
-import { SafeAreaView, View } from 'react-native';
+import theme from '@src/components/themes';
+import { ScreenIds } from '@src/screens';
 import UI from '@src/stores/UI';
 import { autobind } from 'core-decorators';
-import { ScreenIds } from '@src/screens';
-import { Navigation } from 'react-native-navigation';
+import { observer } from 'mobx-react';
+import React, { Component } from 'react';
+import { SafeAreaView, View } from 'react-native';
 import { Button, Text, ThemeProvider } from 'react-native-elements';
-import theme from '@src/components/themes';
+import { Navigation } from 'react-native-navigation';
 
 type Props = {
   componentId: string;
