@@ -6669,7 +6669,8 @@ react-native-camera@^3.9.0:
 
 "react-native-config@https://github.com/luggit/react-native-config.git#master":
   version "0.11.7"
-  resolved "https://github.com/luggit/react-native-config.git#89a602bf8be3808838403a97afaf915caeec76c2"
+  uid "6cfa7c048170746162172fddfba9bcc2398a202d"
+  resolved "https://github.com/luggit/react-native-config.git#6cfa7c048170746162172fddfba9bcc2398a202d"
 
 react-native-device-info@^5.3.0:
   version "5.3.0"
