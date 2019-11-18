@@ -6719,10 +6719,10 @@ react-native-ratings@^6.3.0:
     lodash "^4.17.4"
     prop-types "^15.5.10"
 
-react-native-responsive-fontsize@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/react-native-responsive-fontsize/-/react-native-responsive-fontsize-0.2.1.tgz#c18840e622808702d89f0a3286058f5732f9747d"
-  integrity sha512-2Y+oxhX2KtWcJGSlo+Q/DEmVq4lVTNIsKm11FpgRTMvKdbOacaXIfSOmdQNU09R/rZ8NkMQhzEKvfCkO2nDHXA==
+react-native-responsive-fontsize@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-responsive-fontsize/-/react-native-responsive-fontsize-0.4.0.tgz#900f0ad4fe00c33edf60390704e9b7eb66982f08"
+  integrity sha512-rRypEU21f3+/983gVUfuAh0B6aH0uPFB1GgiiSGvzRf39i+CvMxW32ohF4ofnJ59TxnIS0ihfuaaFwcx3x2ZDg==
   dependencies:
     react-native-iphone-x-helper "^1.0.2"
 
