@@ -68,7 +68,7 @@
     "prettier-plugin-import-sort": "^0.0.3",
     "react-dom": "^16.11.0",
     "react-test-renderer": "^16.11.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.7.2"
   },
   "importSort": {
     ".js, .jsx, .ts, .tsx": {
