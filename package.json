@@ -7,6 +7,7 @@
     "test": "jest",
     "lint": "yarn eslint -c ./.eslintrc.js --ext .js,.ts,.jsx,.tsx,.json src/**/*",
     "pod-install": "bundle install --path vendor/bundle && cd ios && BUNDLE_GEMFILE=../Gemfile bundle exec pod install",
+    "detox-setup": "detox clean-framework-cache && detox build-framework-cache",
     "ri:develop": "react-native run-ios --simulator 'iPhone 11 (13.2)'",
     "ra:develop": "react-native run-android"
   },
