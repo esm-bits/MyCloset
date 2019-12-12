@@ -192,7 +192,7 @@ PODS:
     - React
   - react-native-camera/RN (3.9.0):
     - React
-  - react-native-config (0.11.7):
+  - react-native-config (0.12.0):
     - React
   - React-RCTActionSheet (0.61.5):
     - React-Core/RCTActionSheetHeaders (= 0.61.5)
@@ -233,7 +233,7 @@ PODS:
     - React
   - ReactNativeNavigation (4.0.0):
     - React
-  - RNCAsyncStorage (1.6.2):
+  - RNCAsyncStorage (1.6.3):
     - React
   - RNDeviceInfo (5.3.0):
     - React
@@ -369,7 +369,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: d5525f9ed5f782fdbacb64b9b01a43a9323d2386
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
   react-native-camera: c529629e3ecd017dcdacfd0355576ef489d9d198
-  react-native-config: 8f6b2b9e017f6a5e92a97353c768e19e67294bb1
+  react-native-config: f2c2ae45625a068c35681a16b9bfb1ca58b0adc7
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
   React-RCTAnimation: 791a87558389c80908ed06cc5dfc5e7920dfa360
   React-RCTBlob: d89293cc0236d9cb0933d85e430b0bbe81ad1d72
@@ -382,7 +382,7 @@ SPEC CHECKSUMS:
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   ReactNativeExceptionHandler: 8025d98049c25f186835a3af732dd7c9974d6dce
   ReactNativeNavigation: 022a23140d41d202ca87bd1d64f477df0d4a4f03
-  RNCAsyncStorage: 60a80e72d95bf02a01cace55d3697d9724f0d77f
+  RNCAsyncStorage: 3c304d1adfaea02ec732ac218801cb13897aa8c0
   RNDeviceInfo: f245326b5b61b80db7e9cbc9de6c75688572a4e0
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
