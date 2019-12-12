@@ -44,8 +44,10 @@ Navigation.events().registerAppLaunchedListener(async () => {
               ],
               options: {
                 bottomTab: {
-                  text: 'Home',
                   icon: require('/assets/images/home-icon-silhouette.png'),
+                  iconInsets: {
+                    top: 10,
+                  },
                 },
               },
             },
@@ -61,7 +63,10 @@ Navigation.events().registerAppLaunchedListener(async () => {
               ],
               options: {
                 bottomTab: {
-                  text: 'Camera',
+                  icon: require('/assets/images/magnifying-glass-icon-silhouette.png'),
+                  iconInsets: {
+                    top: 10,
+                  },
                 },
               },
             },
@@ -77,7 +82,10 @@ Navigation.events().registerAppLaunchedListener(async () => {
               ],
               options: {
                 bottomTab: {
-                  text: 'Settings',
+                  icon: require('/assets/images/settings-interface-silhouette.png'),
+                  iconInsets: {
+                    top: 10,
+                  },
                 },
               },
             },
