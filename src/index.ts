@@ -31,14 +31,59 @@ Navigation.events().registerAppLaunchedListener(async () => {
   await DressList.hydrate();
   await Navigation.setRoot({
     root: {
-      stack: {
+      bottomTabs: {
         children: [
           {
-            component: {
-              name: ScreenIds.HOME,
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: ScreenIds.HOME,
+                  },
+                },
+              ],
+              options: {
+                bottomTab: {
+                  text: 'Home',
+                  icon: require('/assets/images/home-icon-silhouette.png'),
+                },
+              },
+            },
+          },
+          {
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: ScreenIds.CAMERA,
+                  },
+                },
+              ],
+              options: {
+                bottomTab: {
+                  text: 'Camera',
+                },
+              },
+            },
+          },
+          {
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: ScreenIds.SETTING,
+                  },
+                },
+              ],
+              options: {
+                bottomTab: {
+                  text: 'Settings',
+                },
+              },
             },
           },
         ],
+        options: {},
       },
     },
   });
