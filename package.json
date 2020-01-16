@@ -6,7 +6,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "yarn eslint -c ./.eslintrc.js --ext .js,.ts,.jsx,.tsx,.json src/**/*",
-    "pod-install": "bundle install --path vendor/bundle && cd ios && BUNDLE_GEMFILE=../Gemfile bundle exec pod install",
+    "pod-install": "bundle install --path vendor/bundle && cd ios && BUNDLE_GEMFILE=../Gemfile bundle exec pod install --repo-update",
     "detox-setup": "detox clean-framework-cache && detox build-framework-cache",
     "ri:develop": "react-native run-ios --simulator 'iPhone 11 (13.3)'",
     "ra:develop": "react-native run-android"
@@ -61,7 +61,7 @@
     "detox": "^14.8.3",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
-    "eslint": "^6.5.1",
+    "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-detox": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.1",

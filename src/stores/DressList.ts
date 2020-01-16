@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import Dress, { DressType } from '@src/stores/models/Dress';
 import { applySnapshot, flow, types } from 'mobx-state-tree';
+import { actionAsync } from 'mobx-utils';
 
 export const DressListStore = types
   .model('DressList', {
@@ -13,9 +14,9 @@ export const DressListStore = types
     /**
      * 服一覧をAsyncStorageからリロードする
      */
-    hydrate: flow(function*() {
+    hydrate: actionAsync(async () => {
       try {
-        const data = yield AsyncStorage.getItem('DressList');
+        const data = await AsyncStorage.getItem('DressList');
         if (data) {
           applySnapshot(store, JSON.parse(data));
         }

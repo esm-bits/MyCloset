@@ -5,7 +5,8 @@
 import UUID from '@src/helpers/UUID';
 import { ScreenIds } from '@src/screens';
 import { PassProps as AlertScreenProps } from '@src/screens/modals/Alert';
-import { flow, types } from 'mobx-state-tree';
+import { types } from 'mobx-state-tree';
+import { actionAsync } from 'mobx-utils';
 import { Navigation } from 'react-native-navigation';
 import RNRestart from 'react-native-restart';
 
@@ -20,10 +21,10 @@ export const UIStore = types
      * ビジー状態を示すコンポーネントを表示する
      * @param isBusy
      */
-    setBusy: flow(function*(isBusy: boolean) {
+    setBusy: actionAsync(async (isBusy: boolean) => {
       if (isBusy) {
         self.busyOverlayComponentId = `BusyOverlayComponent_${UUID()}`;
-        yield Navigation.showOverlay({
+        await Navigation.showOverlay({
           component: {
             id: self.busyOverlayComponentId,
             name: ScreenIds.BUSY,
@@ -36,15 +37,15 @@ export const UIStore = types
         });
       } else {
         self.busyOverlayComponentId &&
-          (yield Navigation.dismissOverlay(self.busyOverlayComponentId));
+          (await Navigation.dismissOverlay(self.busyOverlayComponentId));
       }
       self.isBusy = isBusy;
     }),
     /**
      * Alertを表示する
      */
-    showAlert: flow(function*(props: AlertScreenProps) {
-      yield Navigation.showOverlay({
+    showAlert: actionAsync(async (props: AlertScreenProps) => {
+      await Navigation.showOverlay({
         component: {
           name: ScreenIds.ALERT,
           options: {
@@ -59,8 +60,8 @@ export const UIStore = types
     /**
      * Alertを消す
      */
-    hideAlert: flow(function*(componentId: string) {
-      yield Navigation.dismissOverlay(componentId);
+    hideAlert: actionAsync(async (componentId: string) => {
+      await Navigation.dismissOverlay(componentId);
     }),
     /**
      * アプリのReactNativeの部分を再起動させる

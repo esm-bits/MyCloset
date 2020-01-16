@@ -231,7 +231,7 @@ PODS:
     - ReactCommon/jscallinvoker (= 0.61.5)
   - ReactNativeExceptionHandler (2.10.8):
     - React
-  - ReactNativeNavigation (4.0.0):
+  - ReactNativeNavigation (4.5.1):
     - React
   - RNCAsyncStorage (1.6.3):
     - React
@@ -381,7 +381,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   ReactNativeExceptionHandler: 8025d98049c25f186835a3af732dd7c9974d6dce
-  ReactNativeNavigation: 022a23140d41d202ca87bd1d64f477df0d4a4f03
+  ReactNativeNavigation: 3a27d23003c5802a5e5e3e8d026985100b3feb6b
   RNCAsyncStorage: 3c304d1adfaea02ec732ac218801cb13897aa8c0
   RNDeviceInfo: f245326b5b61b80db7e9cbc9de6c75688572a4e0
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4

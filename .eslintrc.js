@@ -1,7 +1,12 @@
 module.exports = {
   root: true,
+  ignorePatterns: ['node_modules/', 'android/', 'ios'],
   parser: '@typescript-eslint/parser',
-  plugins: ['prettier', '@typescript-eslint'],
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  plugins: ['eslint:recommended', 'plugin:prettier/recommended', '@typescript-eslint'],
   rules: {
     'prettier/prettier': 'error',
     '@typescript-eslint/explicit-function-return-type': 'off',
