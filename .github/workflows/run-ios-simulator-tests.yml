@@ -1,4 +1,4 @@
-name: Run Detox Tests
+name: Run iOS Simulator Tests
 
 on: [push]
 
