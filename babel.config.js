@@ -10,6 +10,7 @@ module.exports = {
         },
       },
     ],
+    '@babel/plugin-proposal-numeric-separator',
     [
       '@babel/plugin-proposal-decorators',
       {
@@ -22,5 +23,8 @@ module.exports = {
         loose: true,
       },
     ],
+    '@babel/plugin-proposal-nullish-coalescing-operator',
+    '@babel/plugin-proposal-optional-chaining',
+    '@babel/proposal-object-rest-spread',
   ],
 };

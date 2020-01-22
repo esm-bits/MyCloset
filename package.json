@@ -6,9 +6,9 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "yarn eslint -c ./.eslintrc.js --ext .js,.ts,.jsx,.tsx,.json src/**/*",
-    "pod-install": "bundle install --path vendor/bundle && cd ios && BUNDLE_GEMFILE=../Gemfile bundle exec pod install",
+    "pod-install": "bundle install --path vendor/bundle && cd ios && BUNDLE_GEMFILE=../Gemfile bundle exec pod install --repo-update",
     "detox-setup": "detox clean-framework-cache && detox build-framework-cache",
-    "ri:develop": "react-native run-ios --simulator 'iPhone 11 (13.2)'",
+    "ri:develop": "react-native run-ios --simulator 'iPhone 11 (13.3)'",
     "ra:develop": "react-native run-android"
   },
   "dependencies": {
@@ -27,18 +27,23 @@
     "react-native-device-info": "^5.3.0",
     "react-native-elements": "^1.2.7",
     "react-native-exception-handler": "^2.10.8",
-    "react-native-navigation": "^4.0.0",
-    "react-native-responsive-fontsize": "^0.2.1",
+    "react-native-navigation": "^4.5.1",
+    "react-native-responsive-fontsize": "^0.4.2",
     "react-native-restart": "https://github.com/avishayil/react-native-restart.git",
     "react-native-vector-icons": "^6.6.0",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/plugin-proposal-class-properties": "^7.7.0",
-    "@babel/plugin-proposal-decorators": "^7.7.0",
-    "@babel/runtime": "^7.7.2",
-    "@react-native-community/eslint-config": "^0.0.5",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
+    "@babel/plugin-proposal-numeric-separator": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/runtime": "^7.8.3",
+    "@react-native-community/eslint-config": "^0.0.6",
+    "@react-native-community/eslint-plugin": "^1.0.0",
     "@types/core-decorators": "^0.20.0",
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
@@ -56,9 +61,10 @@
     "detox": "^14.8.3",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
-    "eslint": "^6.5.1",
+    "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-detox": "^1.0.0",
+    "eslint-plugin-jest": "^23.6.0",
     "eslint-plugin-prettier": "^3.1.1",
     "import-sort-style-module": "^6.0.0",
     "jest": "^24.9.0",
@@ -69,7 +75,7 @@
     "prettier-plugin-import-sort": "^0.0.3",
     "react-dom": "^16.11.0",
     "react-test-renderer": "^16.11.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.7.4"
   },
   "importSort": {
     ".js, .jsx, .ts, .tsx": {
