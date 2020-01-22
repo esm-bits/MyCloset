@@ -3,7 +3,8 @@ module.exports = {
 
   env: {
     'detox/detox': true,
-    "jest/globals": true
+    "jest/globals": true,
+    'node': true
   },
 
   globals: {
