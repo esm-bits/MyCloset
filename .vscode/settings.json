@@ -11,5 +11,5 @@
     "javascript",
     "typescript"
   ],
-  "eslint.packageManager": "yarn",
+  "eslint.packageManager": "yarn"
 }
