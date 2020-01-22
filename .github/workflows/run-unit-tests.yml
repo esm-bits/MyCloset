@@ -1,10 +1,9 @@
-name: Run unit tests (by jest)
+name: Run unit tests
 
 on: [push]
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
 
     container:
@@ -31,4 +30,3 @@ jobs:
 
       - name: Run tests
         run: yarn test
-
