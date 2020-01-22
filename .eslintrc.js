@@ -16,6 +16,12 @@ module.exports = {
   ],
   overrides: [
     {
+      files: ['*.js'],
+      env: {
+        node: true,
+      }
+    },
+    {
       files: ['**/*.ts', '**/*.tsx'],
       rules: {
         '@typescript-eslint/explicit-function-return-type': 'off',
