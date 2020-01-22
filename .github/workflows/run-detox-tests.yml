@@ -36,9 +36,7 @@ jobs:
           key: pods-${{ hashFiles('**/Podfile.lock') }}
 
       - name: Update Pods
-        run: |
-          gem update cocoapods xcodeproj
-          cd ios && pod install && cd ..
+        run: yarn pod-install
 
       - run: brew tap wix/brew
       - run: brew install applesimutils

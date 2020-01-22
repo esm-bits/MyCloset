@@ -1,6 +1,8 @@
+const utils = require('./utils');
+
 describe('Example', () => {
   beforeEach(async () => {
-    await device.reloadReactNative();
+    await utils.relaunchApp();
   });
 
   it('should have welcome screen', async () => {
