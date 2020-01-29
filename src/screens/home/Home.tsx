@@ -4,12 +4,14 @@
 
 import theme from '@src/components/themes';
 import { ScreenIds } from '@src/screens';
+import CategoryList from '@src/stores/CategoryList';
+import { CategoryType } from '@src/stores/models/Category';
 import UI from '@src/stores/UI';
 import { autobind } from 'core-decorators';
 import { observer } from 'mobx-react';
 import React, { Component } from 'react';
-import { SafeAreaView, View } from 'react-native';
-import { Button, Text, ThemeProvider } from 'react-native-elements';
+import { FlatList, SafeAreaView, Text, View } from 'react-native';
+import { ThemeProvider } from 'react-native-elements';
 import { Navigation } from 'react-native-navigation';
 
 type Props = {
@@ -79,16 +81,24 @@ export default class Home extends Component<Props> {
     });
   }
 
+  @autobind
+  renderCategoryListItem({ item }: { item: CategoryType }) {
+    return (
+      <View>
+        <Text>{JSON.stringify(item)}</Text>
+      </View>
+    );
+  }
+
   render() {
     return (
       <SafeAreaView>
         <ThemeProvider theme={theme}>
-          <View>
-            <Text>Home</Text>
-            <Button title="Camera" onPress={this.onPressCameraButton} />
-            <Button title="Restart" onPress={this.onPressRestartButton} />
-            <Button title="Alert" onPress={this.onPressAlertButton} />
-          </View>
+          <FlatList
+            data={CategoryList.categoryList}
+            renderItem={this.renderCategoryListItem}
+            keyExtractor={item => '' + item.id}
+          />
         </ThemeProvider>
       </SafeAreaView>
     );

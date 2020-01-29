@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-community/async-storage';
+import { DateTime } from 'luxon';
 import { applySnapshot, flow, types } from 'mobx-state-tree';
 
 import Category, { CategoryType } from './models/Category';
@@ -27,6 +28,9 @@ export const CategoryListStore = types
     }),
   }));
 
-const store = CategoryListStore.create({ categoryList: [] });
+const now = DateTime.utc().toJSDate();
+const store = CategoryListStore.create({
+  categoryList: [],
+});
 
 export default store;

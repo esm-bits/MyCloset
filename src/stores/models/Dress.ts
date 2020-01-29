@@ -1,10 +1,10 @@
-import { Instance, types } from 'mobx-state-tree';
+import { SnapshotOrInstance, types } from 'mobx-state-tree';
 
 const Dress = types.model('Dress', {
   id: types.number,
   categoryId: types.number,
 });
 
-export type DressType = Instance<typeof Dress>;
+export type DressType = SnapshotOrInstance<typeof Dress>;
 
 export default Dress;
