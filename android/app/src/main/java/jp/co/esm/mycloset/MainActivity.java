@@ -1,4 +1,4 @@
-package com.mycloset;
+package jp.co.esm.mycloset;
 
 
 import com.reactnativenavigation.NavigationActivity;
