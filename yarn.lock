@@ -7305,8 +7305,9 @@ react-native-responsive-fontsize@^0.4.2:
     react-native-iphone-x-helper "^1.0.2"
 
 "react-native-restart@https://github.com/avishayil/react-native-restart.git":
-  version "0.0.12"
-  resolved "https://github.com/avishayil/react-native-restart.git#f3c6e7df7253632025d505c820497df57d840bb8"
+  version "0.0.13"
+  uid "86a08da24f89f2051cbf65da69fecf8d91b10205"
+  resolved "https://github.com/avishayil/react-native-restart.git#86a08da24f89f2051cbf65da69fecf8d91b10205"
 
 react-native-status-bar-height@^2.2.0:
   version "2.4.0"
