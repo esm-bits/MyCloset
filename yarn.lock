@@ -7278,10 +7278,10 @@ react-native-iphone-x-helper@^1.0.2:
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
 
-react-native-navigation@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-4.5.1.tgz#9fb8b08415d1ef723c557cb2a5e0ab969cf43577"
-  integrity sha512-fuWhBm7MnH/pDD54rew1gbZUIFWzo/LXsrJa93OxLORnVUQHUNnJrIVE2Lz/q0wUlWc8wKeyukL4DbM6LWJIyw==
+react-native-navigation@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-5.1.1.tgz#0cdafca304d715f0064b3aebc17250d2fd3f3a4d"
+  integrity sha512-GfgGGU834VDiVuOUiAnKLS2gptQFhGxKlK+G/nF+DIyjOm8WQ9+k0vc4hRIBFdCMy2QBbAQdLqycOQ15Z4FxzQ==
   dependencies:
     hoist-non-react-statics "3.x.x"
     lodash "4.17.x"
