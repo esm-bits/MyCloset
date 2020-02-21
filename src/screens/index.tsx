@@ -1,8 +1,9 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import CameraScreen from '@src/screens/camera/Camera';
-import HomeScreen from '@src/screens/home/Home';
-import SettingScreen from '@src/screens/setting/Setting';
 import React from 'react';
+
+import CameraScreen from './camera/Camera';
+import HomeScreen from './home/Home';
+import SettingScreen from './setting/Setting';
 
 const Stack = createStackNavigator();
 

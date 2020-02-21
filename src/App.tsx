@@ -1,7 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
-import Screens from '@src/screens';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import Screens from './screens';
 
 export default function App() {
   return (
