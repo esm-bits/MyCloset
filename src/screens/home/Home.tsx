@@ -2,95 +2,31 @@
  * ホーム画面
  */
 
-import theme from '@src/components/themes';
-import { ScreenIds } from '@src/screens';
-import UI from '@src/stores/UI';
-import { autobind } from 'core-decorators';
-import { observer } from 'mobx-react';
-import React, { Component } from 'react';
-import { SafeAreaView, View } from 'react-native';
-import { Button, Text, ThemeProvider } from 'react-native-elements';
-import { Navigation } from 'react-native-navigation';
+import { NavigationProp } from '@react-navigation/native';
+import React from 'react';
+import { View } from 'react-native';
+import { Button, Text } from 'react-native-elements';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-type Props = {
-  componentId: string;
-};
+export default function Home(props: { navigation: NavigationProp<any> }) {
+  const onPressCameraButton = () => {
+    props.navigation.navigate('Camera');
+  };
+  const onPressRestartButton = () => {};
+  const onPressAlertButton = () => {};
+  const onPressSettingButton = () => {
+    props.navigation.navigate('Setting');
+  };
 
-@observer
-export default class Home extends Component<Props> {
-  static options() {
-    return {
-      topBar: {
-        title: {
-          text: '服一覧',
-        },
-        rightButtons: [
-          {
-            id: 'showInfo',
-            text: 'info',
-          },
-        ],
-      },
-    };
-  }
-
-  constructor(props: Props) {
-    super(props);
-    Navigation.events().bindComponent(this);
-  }
-
-  async navigationButtonPressed({ buttonId }: { buttonId: string }) {
-    if (buttonId === 'showInfo') {
-      await Navigation.push(this.props.componentId, {
-        component: {
-          name: ScreenIds.SETTING,
-        },
-      });
-    }
-  }
-
-  @autobind
-  async onPressCameraButton() {
-    await Navigation.push(this.props.componentId, {
-      component: {
-        name: ScreenIds.CAMERA,
-        passProps: {},
-        options: {
-          topBar: {
-            backButton: {
-              title: '戻る',
-            },
-          },
-        },
-      },
-    });
-  }
-
-  @autobind
-  onPressRestartButton() {
-    UI.restartApp();
-  }
-
-  @autobind
-  async onPressAlertButton() {
-    await UI.showAlert({
-      title: 'テストアラート',
-      message: 'テストアラートメッセージ',
-    });
-  }
-
-  render() {
-    return (
-      <SafeAreaView>
-        <ThemeProvider theme={theme}>
-          <View>
-            <Text>Home</Text>
-            <Button title="Camera" onPress={this.onPressCameraButton} />
-            <Button title="Restart" onPress={this.onPressRestartButton} />
-            <Button title="Alert" onPress={this.onPressAlertButton} />
-          </View>
-        </ThemeProvider>
-      </SafeAreaView>
-    );
-  }
+  return (
+    <SafeAreaView>
+      <View>
+        <Text>Home</Text>
+        <Button title="Camera" onPress={onPressCameraButton} />
+        <Button title="Restart" onPress={onPressRestartButton} />
+        <Button title="Alert" onPress={onPressAlertButton} />
+        <Button title="Setting" onPress={onPressSettingButton} />
+      </View>
+    </SafeAreaView>
+  );
 }

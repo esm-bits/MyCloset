@@ -194,6 +194,8 @@ PODS:
     - React
   - react-native-config (0.12.0):
     - React
+  - react-native-safe-area-context (0.7.3):
+    - React
   - React-RCTActionSheet (0.61.5):
     - React-Core/RCTActionSheetHeaders (= 0.61.5)
   - React-RCTAnimation (0.61.5):
@@ -231,11 +233,17 @@ PODS:
     - ReactCommon/jscallinvoker (= 0.61.5)
   - ReactNativeExceptionHandler (2.10.8):
     - React
-  - ReactNativeNavigation (4.5.1):
-    - React
   - RNCAsyncStorage (1.6.3):
     - React
+  - RNCMaskedView (0.1.6):
+    - React
   - RNDeviceInfo (5.3.0):
+    - React
+  - RNGestureHandler (1.6.0):
+    - React
+  - RNReanimated (1.7.0):
+    - React
+  - RNScreens (2.0.0-beta.10):
     - React
   - RNVectorIcons (6.6.0):
     - React
@@ -261,6 +269,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - react-native-camera (from `../node_modules/react-native-camera`)
   - react-native-config (from `../node_modules/react-native-config`)
+  - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -273,9 +282,12 @@ DEPENDENCIES:
   - ReactCommon/jscallinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactNativeExceptionHandler (from `../node_modules/react-native-exception-handler`)
-  - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+  - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
+  - RNScreens (from `../node_modules/react-native-screens`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -318,6 +330,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-camera"
   react-native-config:
     :path: "../node_modules/react-native-config"
+  react-native-safe-area-context:
+    :path: "../node_modules/react-native-safe-area-context"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -340,12 +354,18 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   ReactNativeExceptionHandler:
     :path: "../node_modules/react-native-exception-handler"
-  ReactNativeNavigation:
-    :path: "../node_modules/react-native-navigation"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
+  RNCMaskedView:
+    :path: "../node_modules/@react-native-community/masked-view"
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
+  RNScreens:
+    :path: "../node_modules/react-native-screens"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   Yoga:
@@ -370,6 +390,7 @@ SPEC CHECKSUMS:
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
   react-native-camera: c529629e3ecd017dcdacfd0355576ef489d9d198
   react-native-config: f2c2ae45625a068c35681a16b9bfb1ca58b0adc7
+  react-native-safe-area-context: e200d4433aba6b7e60b52da5f37af11f7a0b0392
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
   React-RCTAnimation: 791a87558389c80908ed06cc5dfc5e7920dfa360
   React-RCTBlob: d89293cc0236d9cb0933d85e430b0bbe81ad1d72
@@ -381,9 +402,12 @@ SPEC CHECKSUMS:
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   ReactNativeExceptionHandler: 8025d98049c25f186835a3af732dd7c9974d6dce
-  ReactNativeNavigation: 3a27d23003c5802a5e5e3e8d026985100b3feb6b
   RNCAsyncStorage: 3c304d1adfaea02ec732ac218801cb13897aa8c0
+  RNCMaskedView: a88953beefbd347a29072d9eba90e42945fe291e
   RNDeviceInfo: f245326b5b61b80db7e9cbc9de6c75688572a4e0
+  RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
+  RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
+  RNScreens: c596b54c3ab63b0390aa3cb081edd438147d40ae
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 

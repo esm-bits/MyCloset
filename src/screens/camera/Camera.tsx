@@ -7,16 +7,6 @@ type Props = {
 };
 
 export default class Camera extends Component<Props> {
-  static options() {
-    return {
-      topBar: {
-        title: {
-          text: '服を撮影する',
-        },
-      },
-    };
-  }
-
   private cameraRef = React.createRef<RNCamera>();
 
   takePicture = async () => {

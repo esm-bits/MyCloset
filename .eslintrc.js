@@ -27,7 +27,8 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-use-before-define': 'warn',
         '@typescript-eslint/ban-ts-ignore': 'warn',
-        'react-native/no-inline-styles': 'warn',
+        'react-native/no-inline-styles': 'off',
+        '@typescript-eslint/no-use-before-define': 'off',
       },
       extends: [
         '@react-native-community',
