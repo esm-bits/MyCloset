@@ -3,7 +3,7 @@ import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 
-import Screens from './screens';
+import Screens from './components/screens';
 import store from './store';
 
 export default function App() {

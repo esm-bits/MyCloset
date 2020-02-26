@@ -21,6 +21,7 @@
     "lodash-es": "^4.17.15",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
+    "react-hook-form": "^4.9.8",
     "react-native": "0.61.5",
     "react-native-camera": "^3.9.0",
     "react-native-config": "0.12.0",

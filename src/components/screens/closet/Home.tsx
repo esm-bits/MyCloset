@@ -2,14 +2,14 @@
  * カテゴリー一覧画面
  */
 
-import { NavigationProp } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
 import { FlatList, ListRenderItemInfo, StyleSheet } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { useSelector } from 'react-redux';
 
-import MCButton from '../../components/MCButton';
-import Screen from '../../components/MCScreen';
+import MCButton from '../../common/MCButton';
+import Screen from '../../common/MCScreen';
 
 function CategoryList() {
   const categoryList = useSelector<Store, Category[]>(
@@ -21,14 +21,13 @@ function CategoryList() {
   return <FlatList data={categoryList} renderItem={renderItem} />;
 }
 
-export default function ClosetHome(props: { navigation: NavigationProp<any> }) {
+export default function Home(props: { navigation: StackNavigationProp<any> }) {
   return (
     <Screen>
       <MCButton
         title="カテゴリー追加"
-        onPress={async () => {
-          console.log('here');
-          await new Promise(resolve => setTimeout(resolve, 3000));
+        onPress={() => {
+          props.navigation.push('AddCategory');
         }}
       />
       <CategoryList />
