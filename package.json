@@ -32,6 +32,9 @@
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.0.0-beta.10",
     "react-native-vector-icons": "^6.6.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
@@ -52,7 +55,9 @@
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.13",
     "@types/react-native": "^0.61.2",
+    "@types/react-redux": "^7.1.7",
     "@types/react-test-renderer": "^16.9.1",
+    "@types/redux-logger": "^3.0.7",
     "@types/uuid": "^3.4.6",
     "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@typescript-eslint/parser": "^2.7.0",
