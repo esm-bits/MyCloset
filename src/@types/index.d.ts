@@ -24,6 +24,9 @@ declare type Store = {
   userContents: UserContentsState;
 };
 
+declare type PersistedStore = Store &
+  import('redux-persist/es/persistReducer').PersistPartial;
+
 declare type UIState = {
   isBusy: boolean;
 };
