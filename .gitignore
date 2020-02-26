@@ -61,7 +61,3 @@ buck-out/
 
 /vendor/
 /.bundle/
-
-# xcodeprojも基本無視
-# 修正を入れる場合は、force addする
-project.pbxproj
