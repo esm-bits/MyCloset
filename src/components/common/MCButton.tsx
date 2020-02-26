@@ -15,6 +15,8 @@ export default function MCButton(props: {} & ButtonProps) {
     {
       callbackWillInvoke: () => setLoading(true),
       callbackDidInvoke: () => setLoading(false),
+      wait: 200,
+      maxWait: 500,
     },
     [props.onPress, setLoading],
   );

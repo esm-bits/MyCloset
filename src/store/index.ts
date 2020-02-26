@@ -12,6 +12,7 @@ export type Actions = UIActions | UserContentsActions;
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
+  blacklist: ['ui'],
 };
 
 const logger = createLogger({

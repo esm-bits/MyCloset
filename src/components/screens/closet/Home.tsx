@@ -9,7 +9,7 @@ import { ListItem } from 'react-native-elements';
 import { useSelector } from 'react-redux';
 
 import MCButton from '../../common/MCButton';
-import Screen from '../../common/MCScreen';
+import MCScreen from '../../common/MCScreen';
 
 function CategoryList() {
   const categoryList = useSelector<Store, Category[]>(
@@ -23,7 +23,7 @@ function CategoryList() {
 
 export default function Home(props: { navigation: StackNavigationProp<any> }) {
   return (
-    <Screen>
+    <MCScreen>
       <MCButton
         title="カテゴリー追加"
         onPress={() => {
@@ -31,6 +31,6 @@ export default function Home(props: { navigation: StackNavigationProp<any> }) {
         }}
       />
       <CategoryList />
-    </Screen>
+    </MCScreen>
   );
 }
