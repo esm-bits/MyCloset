@@ -233,7 +233,7 @@ PODS:
     - ReactCommon/jscallinvoker (= 0.61.5)
   - ReactNativeExceptionHandler (2.10.8):
     - React
-  - RNCAsyncStorage (1.6.3):
+  - RNCAsyncStorage (1.8.0):
     - React
   - RNCMaskedView (0.1.6):
     - React
@@ -402,7 +402,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   ReactNativeExceptionHandler: 8025d98049c25f186835a3af732dd7c9974d6dce
-  RNCAsyncStorage: 3c304d1adfaea02ec732ac218801cb13897aa8c0
+  RNCAsyncStorage: 5d83b49070d41fd72906a116c5e7bdac4ea3a814
   RNCMaskedView: a88953beefbd347a29072d9eba90e42945fe291e
   RNDeviceInfo: f245326b5b61b80db7e9cbc9de6c75688572a4e0
   RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a

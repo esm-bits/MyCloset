@@ -12,7 +12,7 @@
     "ra:develop": "react-native run-android"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.6.3",
+    "@react-native-community/async-storage": "^1.8.0",
     "@react-native-community/masked-view": "^0.1.6",
     "@react-navigation/bottom-tabs": "^5.0.7",
     "@react-navigation/native": "^5.0.6",
@@ -38,6 +38,7 @@
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
@@ -62,6 +63,7 @@
     "@types/react-redux": "^7.1.7",
     "@types/react-test-renderer": "^16.9.1",
     "@types/redux-logger": "^3.0.7",
+    "@types/redux-persist": "^4.3.1",
     "@types/uuid": "^3.4.6",
     "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@typescript-eslint/parser": "^2.7.0",
