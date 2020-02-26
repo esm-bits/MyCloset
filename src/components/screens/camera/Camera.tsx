@@ -1,3 +1,7 @@
+/**
+ * 服を撮影し、データを保存する画面
+ */
+
 import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { RNCamera } from 'react-native-camera';

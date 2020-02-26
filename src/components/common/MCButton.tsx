@@ -1,4 +1,7 @@
-import _ from 'lodash';
+/**
+ * 2度押し緩和処理を内包した、MyClsoet用ボタン
+ */
+
 import React, { useState } from 'react';
 import { GestureResponderEvent } from 'react-native';
 import { Button, ButtonProps } from 'react-native-elements';

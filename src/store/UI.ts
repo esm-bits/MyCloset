@@ -2,8 +2,6 @@
  * UIの表示状態
  */
 
-export type UIActions = SetBusyAction | UnsetBusyAction;
-
 const initialState: UIState = Object.freeze({
   isBusy: false,
 });
@@ -21,6 +19,8 @@ export function UIReducer(state = initialState, action: UIActions): UIState {
     }
   }
 }
+
+export type UIActions = SetBusyAction | UnsetBusyAction;
 
 type SetBusyAction = {
   type: 'SET_BUSY';

@@ -1,3 +1,7 @@
+/**
+ * カテゴリー追加画面
+ */
+
 import React from 'react';
 import { Input } from 'react-native-elements';
 

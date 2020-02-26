@@ -1,3 +1,7 @@
+/**
+ * Overlayを出す機能を備えた、MyCloset用画面
+ */
+
 import React from 'react';
 import { Text, View } from 'react-native';
 import { Overlay } from 'react-native-elements';

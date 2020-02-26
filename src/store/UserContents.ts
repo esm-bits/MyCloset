@@ -13,8 +13,6 @@ const initialState: UserContentsState = Object.freeze({
   dressListByCategory: new Map(),
 } as UserContentsState);
 
-export type UserContentsActions = AddCategoryAction;
-
 export function UserContentsReducer(
   state = initialState,
   action: UserContentsActions,
@@ -34,6 +32,8 @@ export function UserContentsReducer(
     }
   }
 }
+
+export type UserContentsActions = AddCategoryAction;
 
 type AddCategoryAction = {
   type: 'ADD_CATEGORY';

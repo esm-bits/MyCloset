@@ -14,6 +14,11 @@ declare type Category = {
 declare type DressId = string;
 declare type Dress = {
   id: DressId;
+  imageFilePath: string;
+  name?: string;
+  description?: string;
+  rating?: number;
+  like?: boolean;
 };
 
 /**
