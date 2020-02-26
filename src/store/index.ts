@@ -2,13 +2,12 @@ import { AsyncStorage } from 'react-native';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import { createLogger } from 'redux-logger';
 import { persistReducer, persistStore } from 'redux-persist';
-import { PersistPartial } from 'redux-persist/es/persistReducer';
 
 import Config from '../Config';
 import { UIActions, UIReducer } from './UI';
 import { UserContentsActions, UserContentsReducer } from './UserContents';
 
-type Actions = UIActions | UserContentsActions;
+export type Actions = UIActions | UserContentsActions;
 
 const persistConfig = {
   key: 'root',

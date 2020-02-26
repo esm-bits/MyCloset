@@ -1,4 +1,8 @@
-import { AnyAction } from 'redux';
+/**
+ * ユーザーが作成するコンテンツ
+ */
+
+import UUID from '../helpers/UUID';
 
 const initialState: UserContentsState = Object.freeze({
   categoryList: [
@@ -9,11 +13,31 @@ const initialState: UserContentsState = Object.freeze({
   dressListByCategory: new Map(),
 } as UserContentsState);
 
-export type UserContentsActions = AnyAction;
+export type UserContentsActions = AddCategoryAction;
 
 export function UserContentsReducer(
   state = initialState,
   action: UserContentsActions,
 ): UserContentsState {
-  return state;
+  switch (action.type) {
+    case 'ADD_CATEGORY': {
+      return {
+        ...state,
+        categoryList: [
+          ...state.categoryList,
+          ({ ...action.payload, id: UUID() } as unknown) as Category,
+        ],
+      };
+    }
+    default: {
+      return state;
+    }
+  }
 }
+
+type AddCategoryAction = {
+  type: 'ADD_CATEGORY';
+  payload: {
+    category: Partial<Category>;
+  };
+};

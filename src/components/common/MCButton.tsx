@@ -8,7 +8,7 @@ import useDebouncedCallback from '../hooks/useDebouncedCallback';
 export default function MCButton(props: {} & ButtonProps) {
   const [loading, setLoading] = useState(false);
 
-  const [onPress] = useDebouncedCallback(
+  const onPress = useDebouncedCallback(
     (event: GestureResponderEvent) => {
       props.onPress?.(event);
     },

@@ -32,5 +32,5 @@ export default function useDebouncedCallback<F extends Function>(
     },
     [debouncedCb, options],
   ) as unknown) as F;
-  return [callDebouncedCb];
+  return callDebouncedCb;
 }
