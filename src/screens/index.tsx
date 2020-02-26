@@ -1,20 +1,20 @@
-import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 
 import CameraScreen from './camera/Camera';
-import HomeScreen from './home/Home';
+import Closet from './closet';
 import SettingScreen from './setting/Setting';
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function Screens() {
   return (
     <>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Camera" component={CameraScreen} />
-        <Stack.Screen name="Setting" component={SettingScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator initialRouteName="Closet">
+        <Tab.Screen name="Closet" component={Closet} />
+        <Tab.Screen name="Camera" component={CameraScreen} />
+        <Tab.Screen name="Setting" component={SettingScreen} />
+      </Tab.Navigator>
     </>
   );
 }
