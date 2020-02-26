@@ -4,7 +4,7 @@
 
 import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
-import { FlatList, ListRenderItemInfo, StyleSheet } from 'react-native';
+import { FlatList, ListRenderItemInfo } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { useSelector } from 'react-redux';
 
@@ -34,9 +34,3 @@ export default function Home(props: { navigation: StackNavigationProp<any> }) {
     </Screen>
   );
 }
-
-const styles = StyleSheet.create({
-  categoryList: {
-    flex: 1,
-  },
-});
