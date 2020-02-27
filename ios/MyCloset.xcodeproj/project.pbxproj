@@ -47,6 +47,7 @@
 		2185F66884558A8E6169077F /* libPods-MyCloset.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCloset.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A526762C84E6E99395E87C /* Pods-MyClosetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyClosetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyClosetTests/Pods-MyClosetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5370F229467100F2FB386645 /* Pods-MyCloset.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCloset.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCloset/Pods-MyCloset.release.xcconfig"; sourceTree = "<group>"; };
+		749C827A2407840B0079FA9A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		98EB0CF7F518748257DE642D /* Pods-MyClosetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyClosetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyClosetTests/Pods-MyClosetTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB5FD6EDFCEF66D8ADC958EA /* libPods-MyClosetTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyClosetTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB6689ABB00B725BEB8CE91 /* Pods-MyCloset.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCloset.debug.xcconfig"; path = "Target Support Files/Pods-MyCloset/Pods-MyCloset.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +200,7 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MyCloset" */;
 			buildPhases = (
 				D7D34B5B24FA103355D20B0F /* [CP] Check Pods Manifest.lock */,
+				749C827B240784A90079FA9A /* Generate react-native-config */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -305,6 +307,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		749C827B240784A90079FA9A /* Generate react-native-config */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate react-native-config";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb\" \"${SRCROOT}/..\" \"${SRCROOT}/tmp.xcconfig\"\n";
 		};
 		AC6D4AE606007A46D2FD607F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -498,8 +518,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.esm.mycloset;
 				PRODUCT_NAME = MyCloset;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(IOS_BUNDLE_IDENTIFIER)";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -518,14 +538,15 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.co.esm.mycloset;
 				PRODUCT_NAME = MyCloset;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(IOS_BUNDLE_IDENTIFIER)";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 749C827A2407840B0079FA9A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -579,6 +600,7 @@
 		};
 		83CBBA211A601CBA00E9B192 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 749C827A2407840B0079FA9A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
