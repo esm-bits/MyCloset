@@ -142,6 +142,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		74AB736C24078ED000E6F3E1 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				749C827A2407840B0079FA9A /* Config.xcconfig */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +166,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				2CDD7990A75978786C751287 /* Pods */,
+				74AB736C24078ED000E6F3E1 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -200,7 +209,6 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MyCloset" */;
 			buildPhases = (
 				D7D34B5B24FA103355D20B0F /* [CP] Check Pods Manifest.lock */,
-				749C827B240784A90079FA9A /* Generate react-native-config */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -307,24 +315,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		749C827B240784A90079FA9A /* Generate react-native-config */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Generate react-native-config";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb\" \"${SRCROOT}/..\" \"${SRCROOT}/tmp.xcconfig\"\n";
 		};
 		AC6D4AE606007A46D2FD607F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -518,8 +508,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_NAME = MyCloset;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(IOS_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = MyCloset;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -538,8 +528,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_NAME = MyCloset;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(IOS_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = MyCloset;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
