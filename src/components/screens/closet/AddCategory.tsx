@@ -10,7 +10,7 @@ import { Input } from 'react-native-elements';
 import MCButton from '../../common/MCButton';
 import MCScreen from '../../common/MCScreen';
 import useStoreDispatch from '../../hooks/useStoreDispatch';
-import { ClosetStackParamList } from './types';
+import { ClosetStackParamList } from '../types';
 
 export default function AddCategory(props: {
   navigation: StackNavigationProp<ClosetStackParamList, 'AddCategory'>;

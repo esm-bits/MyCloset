@@ -1,10 +1,10 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 
+import { ClosetStackParamList } from '../types';
 import AddCategory from './AddCategory';
 import Category from './Category';
 import Home from './Home';
-import { ClosetStackParamList } from './types';
 
 const Stack = createStackNavigator<ClosetStackParamList>();
 

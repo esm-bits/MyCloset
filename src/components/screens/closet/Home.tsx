@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 
 import MCButton from '../../common/MCButton';
 import MCScreen from '../../common/MCScreen';
-import { ClosetStackParamList } from './types';
+import { ClosetStackParamList } from '../types';
 
 function CategoryList() {
   const categoryList = useSelector<Store, Category[]>(
