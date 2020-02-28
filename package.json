@@ -8,8 +8,12 @@
     "lint": "yarn eslint -c ./.eslintrc.js --ext .js,.ts,.jsx,.tsx,.json src/**/*",
     "pod-install": "bundle install --path vendor/bundle && cd ios && BUNDLE_GEMFILE=../Gemfile bundle exec pod install --repo-update",
     "detox-setup": "detox clean-framework-cache && detox build-framework-cache",
-    "ri:develop": "react-native run-ios --simulator 'iPhone 11 (13.3)'",
-    "ra:develop": "react-native run-android"
+    "ri:develop": "react-native run-ios --simulator 'iPhone 8' --configuration Debug --scheme 'MyCloset'",
+    "ri:staging": "react-native run-ios --simulator 'iPhone 8' --configuration Debug --scheme 'MyCloset Staging'",
+    "ri:production": "react-native run-ios --simulator 'iPhone 8' --configuration Debug --scheme 'MyCloset Production'",
+    "ra:develop": "react-native run-android --variant developDebug --appId jp.co.esm.mycloset.dev",
+    "ra:staging": "react-native run-android --variant stagingDebug --appId jp.co.esm.mycloset.stg",
+    "ra:production": "react-native run-android --variant productionDebug"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.8.0",

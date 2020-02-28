@@ -22,11 +22,16 @@ sudo gem install bundler
 yarn pod-install
 ```
 
-- 起動
+- 開発用起動
 
 ```sh
 # ios
-yarn react-native run-ios
+yarn ri:develop
+yarn ri:staging
+yarn ri:production
+
 # android
-yarn react-native run-android
+yarn ra:develop
+yarn ra:staging
+yarn ra:production
 ```
