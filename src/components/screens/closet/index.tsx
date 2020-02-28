@@ -4,8 +4,9 @@ import React from 'react';
 import AddCategory from './AddCategory';
 import Category from './Category';
 import Home from './Home';
+import { ClosetStackParamList } from './types';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<ClosetStackParamList>();
 
 export default function Closet() {
   return (

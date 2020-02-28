@@ -23,7 +23,7 @@ export function UserContentsReducer(
         ...state,
         categoryList: [
           ...state.categoryList,
-          ({ ...action.payload, id: UUID() } as unknown) as Category,
+          ({ ...action.payload.category, id: UUID() } as unknown) as Category,
         ],
       };
     }

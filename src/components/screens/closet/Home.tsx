@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 
 import MCButton from '../../common/MCButton';
 import MCScreen from '../../common/MCScreen';
+import { ClosetStackParamList } from './types';
 
 function CategoryList() {
   const categoryList = useSelector<Store, Category[]>(
@@ -21,7 +22,9 @@ function CategoryList() {
   return <FlatList data={categoryList} renderItem={renderItem} />;
 }
 
-export default function Home(props: { navigation: StackNavigationProp<any> }) {
+export default function Home(props: {
+  navigation: StackNavigationProp<ClosetStackParamList, 'Home'>;
+}) {
   return (
     <MCScreen>
       <MCButton
