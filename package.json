@@ -70,7 +70,7 @@
     "@types/redux-persist": "^4.3.1",
     "@types/uuid": "^3.4.6",
     "@typescript-eslint/eslint-plugin": "^2.7.0",
-    "@typescript-eslint/parser": "^2.7.0",
+    "@typescript-eslint/parser": "^2.34.0",
     "babel-jest": "^24.9.0",
     "detox": "^14.8.3",
     "enzyme": "^3.10.0",
