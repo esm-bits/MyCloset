@@ -33,7 +33,7 @@
     "react-native-elements": "^1.2.7",
     "react-native-exception-handler": "^2.10.8",
     "react-native-gesture-handler": "^1.6.0",
-    "react-native-reanimated": "^1.7.0",
+    "react-native-reanimated": "^2.10.0",
     "react-native-responsive-fontsize": "^0.4.2",
     "react-native-restart": "https://github.com/avishayil/react-native-restart.git",
     "react-native-safe-area-context": "^0.7.3",
